@@ -1,0 +1,14 @@
+# Test base performance
+- Run hardware
+- Run amiddle
+- Localization: make sure the robot is localized correctly
+- Run imu: roslaunch sandbox imu.launch
+- Run robot_pose_ekf: roslaunch sandbox amigo_ekf.launch
+- Start bag: rosbag record /tf /amcl_pose /amigo/base/measurements /amigo/base/references /amigo/base_front_laser /robot_pose_ekf/odom
+- Standard test:
+    rosrun sandbox base_tester (needs to be updated for sergio)
+  Otherwise:
+    Just drive arounc
+    
+- Add data to svn
+- Run matlabscript:
