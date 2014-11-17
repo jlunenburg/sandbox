@@ -2,10 +2,13 @@ cmake_minimum_required(VERSION 2.8.3)
 project(sandbox)
 
 find_package(catkin REQUIRED COMPONENTS
+    roscpp
     geometry_msgs
     std_srvs
+    cmake_modules
 )
 
+find_package(TinyXML REQUIRED)
 # find_package(Boost REQUIRED COMPONENTS system program_options)
 # find_package(PCL REQUIRED)
 # find_package(OpenCV REQUIRED)
@@ -42,7 +45,7 @@ catkin_package(
 #  INCLUDE_DIRS include
 #  LIBRARIES bla
 #  CATKIN_DEPENDS other_catkin_pkg
-#  DEPENDS system_lib
+  DEPENDS TinyXML
 )
 
 # ------------------------------------------------------------------------------------------------
@@ -52,8 +55,12 @@ catkin_package(
 include_directories(
     include
     ${catkin_INCLUDE_DIRS}
+    ${TinyXML_INCLUDE_DIRS}
 )
 
 # Base tester
 add_executable(base_tester src/base_tester.cpp)
-target_link_libraries(base_tester tue_manipulation)
+target_link_libraries(base_tester 
+                      ${catkin_LIBRARIES}
+                      ${TinyXML_LIBRARIES}
+                      )
