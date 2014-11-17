@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+
+<launch>
+    
+    <!-- 
+        First: give permissions: 
+            sudo chmod 777 /dev/ttyUSB0 
+        Configure device?: 
+            rosrun xsens_driver mtdevice.py -c --output-mode=coapvs --output-settings=tqMAG 
+    -->
+    
+    <!-- Launch -->
+
+</launch>
