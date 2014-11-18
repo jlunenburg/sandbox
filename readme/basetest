@@ -2,13 +2,17 @@
 - Run hardware
 - Run amiddle
 - Localization: make sure the robot is localized correctly
-- Run imu: roslaunch sandbox imu.launch
+- Run imu: roslaunch sandbox imu.launch (if this does not work, enter: sudo chmod 777 /dev/ttyUSB0)
 - Run robot_pose_ekf: roslaunch sandbox amigo_ekf.launch
-- Start bag: rosbag record /tf /amcl_pose /amigo/base/measurements /amigo/base/references /amigo/base_front_laser /robot_pose_ekf/odom
+- Start bag: rosbag record /tf /amcl_pose /amigo/base/measurements /amigo/base/references /amigo/base_front_laser /robot_pose_ekf/odom /imu/data
 - Standard test:
     rosrun sandbox base_tester (needs to be updated for sergio)
   Otherwise:
     Just drive arounc
+- Drive over obstacle
     
 - Add data to svn
-- Run matlabscript:
+- Run matlabscript: plot_base_performance.m (for slip etc.)
+
+
+
