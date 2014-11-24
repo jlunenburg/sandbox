@@ -64,3 +64,9 @@ target_link_libraries(base_tester
                       ${catkin_LIBRARIES}
                       ${TinyXML_LIBRARIES}
                       )
+                      
+                      # Base tester
+add_executable(amcl_trigger src/amcl_trigger.cpp)
+target_link_libraries(amcl_trigger 
+                      ${catkin_LIBRARIES}
+                      )

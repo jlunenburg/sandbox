@@ -16,5 +16,18 @@
 - Run matlabscript: plot_base_performance.m (for slip etc.)
 
 
+amigo_corridor_01:
+- max vel: 0.74
+- controlled by keyboard
 
+amigo_corridor_02
+- max vel: 0.74
+- controlled by keyboard
+- amcl_trigger enabled
+- startpose: 0, 0.3, 0
 
+amigo_corridor_02
+- max vel: 0.74
+- controlled by keyboard
+- amcl_trigger enabled at 40Hz 
+- startpose: 0, 0.3, 0

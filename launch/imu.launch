@@ -3,7 +3,7 @@
 <launch>
     
     <!-- Static tf publisher -->
-    <node pkg="tf" type="static_transform_publisher" name="imu_tf_broadcaster" args="-0.305 -0.065 0.25 0 0 0 1 amigo/base_link imu 100" />
+    <node pkg="tf" type="static_transform_publisher" name="imu_tf_broadcaster" args="-0.0 -0.105 1.2 0 0 0 1 amigo/base_link imu 100" />
     
     <!-- Launch -->
     <node pkg="xsens_driver" type="mtnode.py" name="imu_node">
