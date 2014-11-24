@@ -26,8 +26,13 @@ amigo_corridor_02
 - amcl_trigger enabled
 - startpose: 0, 0.3, 0
 
-amigo_corridor_02
+amigo_corridor_03
 - max vel: 0.74
 - controlled by keyboard
 - amcl_trigger enabled at 40Hz 
 - startpose: 0, 0.3, 0
+
+amigo_bump_01
+- vel 03 m/s
+- controlled by keyboard
+- startpose 8.57, -0.57
