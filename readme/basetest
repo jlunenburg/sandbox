@@ -2,8 +2,10 @@
 - Run hardware
 - Run amiddle
 - Localization: make sure the robot is localized correctly
+- Mount imu on the robot. Make sure the tf in imu.launch is correct.
 - Run imu: roslaunch sandbox imu.launch (if this does not work, enter: sudo chmod 777 /dev/ttyUSB0)
 - Run robot_pose_ekf: roslaunch sandbox amigo_ekf.launch
+- ToDo: make sure we log the interpolated cmd_vel!!!
 - Start bag: (amigo) rosbag record /tf /amcl_pose /amigo/base/measurements /amigo/base/references /amigo/base_front_laser /robot_pose_ekf/odom /imu/data
 - Start bag: (sergio) rosbag record /tf /amcl_pose /sergio/base/measurements /sergio/base/references /sergio/base_front_laser /robot_pose_ekf/odom /imu/data
 - Standard test:
