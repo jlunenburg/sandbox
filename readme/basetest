@@ -31,6 +31,9 @@ amigo0_75
 amigo1_0
 - 10 s at 1.0 m/s
 
+amigo0_25
+- 25 s at 0.25 m/s
+
 amigo_bump_01
 - 10 s at 0.25 m/s
 - over 1 row of tiles
