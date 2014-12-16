@@ -1,63 +1,9 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <BaseTrajectory>
-	<Section duration="2.0" id="1">
+	<Section duration="10.0" id="1">
 		<Twist>
-			<linear x="1.0" y="0.0" />
+			<linear x="0.25" y="0.0" />
 			<angular z="0.0"/>
-		</Twist>
-	</Section>
-	<Section duration="2.0" id="2">
-		<Twist>
-			<linear x="0.0" y="1.0" />
-			<angular z="0.0"/>
-		</Twist>
-	</Section>
-	<Section duration="2.0" id="3">
-		<Twist>
-			<linear x="-1.0" y="0.0" />
-			<angular z="0.0"/>
-		</Twist>
-	</Section>
-	<Section duration="2.0" id="4">
-		<Twist>
-			<linear x="0.0" y="-1.0" />
-			<angular z="0.0"/>
-		</Twist>
-	</Section>
-	<Section duration="2.0" id="5">
-		<Twist>
-			<linear x="0.7" y="-0.7" />
-			<angular z="0.0"/>
-		</Twist>
-	</Section>
-	<Section duration="2.0" id="6">
-		<Twist>
-			<linear x="0.7" y="0.7" />
-			<angular z="0.0"/>
-		</Twist>
-	</Section>
-	<Section duration="2.0" id="7">
-		<Twist>
-			<linear x="-0.7" y="0.7" />
-			<angular z="0.0"/>
-		</Twist>
-	</Section>
-	<Section duration="2.0" id="8">
-		<Twist>
-			<linear x="-0.7" y="-0.7" />
-			<angular z="0.0"/>
-		</Twist>
-	</Section>
-	<Section duration="8.0" id="9">
-		<Twist>
-			<linear x="0.5" y="0.0" />
-			<angular z="0.7854"/>
-		</Twist>
-	</Section>
-	<Section duration="4.0" id="10">
-		<Twist>
-			<linear x="0.5" y="0.0" />
-			<angular z="-1.5708"/>
 		</Twist>
 	</Section>
 </BaseTrajectory>

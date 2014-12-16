@@ -5,6 +5,7 @@
 - Mount imu on the robot. Make sure the tf in imu.launch is correct.
 - Run imu: roslaunch sandbox imu.launch (if this does not work, enter: sudo chmod 777 /dev/ttyUSB0)
 - Run robot_pose_ekf: roslaunch sandbox amigo_ekf.launch
+- Rum amcl_trigger: rosrun sandbox amcl_trigger
 - ToDo: make sure we log the interpolated cmd_vel!!!
 - Start bag: (amigo) rosbag record /tf /amcl_pose /amigo/base/measurements /amigo/base/references /amigo/base_front_laser /robot_pose_ekf/odom /imu/data
 - Start bag: (sergio) rosbag record /tf /amcl_pose /sergio/base/measurements /sergio/base/references /sergio/base_front_laser /robot_pose_ekf/odom /imu/data
@@ -17,7 +18,35 @@
 - Add data to svn
 - Run matlabscript: plot_base_performance.m (for slip etc.)
 
+### 16 Dec 2014 ###
+amigo0_5:
+- 20 s at 0.5 m/s
+- startpose (0, 0.2, 0.0)
+- amcl_trigger enabled
+- controlled by base_tester
 
+amigo0_75
+- 15 s at 0.75 m/s
+
+amigo1_0
+- 10 s at 1.0 m/s
+
+amigo_bump_01
+- 10 s at 0.25 m/s
+- over 1 row of tiles
+- straigt angle
+
+amigo_bump_02
+- 10 s at 0.25 m/s
+- 1 row of tiles
+- startpose: 0, 0.0, (0,0,0.1,0.99) (0.2,0.9799 did not work)
+
+amigo_bump_03
+- 10 s at 0.25 m/s
+- half row of tiles (only left half). AMIGO slid of...
+- startpose: 0, 0.2, 0
+
+### Old test (don't know date) ###
 amigo_corridor_01:
 - max vel: 0.74
 - controlled by keyboard
