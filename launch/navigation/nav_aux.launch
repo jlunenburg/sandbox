@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<launch>
+    
+    <!-- Set sim time true -->
+    <param name="/use_sim_time" value="true"/>
+    
+    <!-- Load robot -->
+    <param name="/amigo/robot_description" textfile="$(find amigo_description)/urdf/amigo.urdf" />
+    
+    <!-- RGBD data -->
+    <node pkg="rgbd" type="rgbd_to_ros" name="rgbd_to_ros">
+        <remap from="rgbd" to="/amigo/top_kinect/rgbd"/>
+        <remap from="rgb/image" to="/amigo/top_kinect/rgb/image_color"/>
+        <remap from="depth/image" to="/amigo/top_kinect/depth_registered/hw_registered/image_rect_raw"/>
+        <remap from="rgb/camera_info" to="/amigo/top_kinect/rgb/camera_info"/>
+        <remap from="depth/camera_info" to="/amigo/top_kinect/depth_registered/camera_info"/>
+    </node>
+    <!-- <remap from="depth/image" to="/amigo/top_kinect/depth_registered/image"/> -->
+    
+    <!-- tf server -->
+    <node pkg="tf_server" type="tf_server" name="tf_server"/>
+    
+    <!-- ED visualization tool -->
+    <node pkg="ed_gui_server" type="ed_rviz_publisher" name="ed_rviz_publisher"/>
+
+</launch>
