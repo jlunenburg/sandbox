@@ -2,3 +2,5 @@ Octomap
 To create the octomap, we need the octomap map maker < tue-get install ros-octomap_map_maker >  and make!
 Create the octomap < rosrun octomap_map_maker octomap_map_maker coveroctomap.pgm 0.025 0.8 5.0 5.0 1 >> octomap.ot >
 Install octomap server < git clone https://github.com/OctoMap/octomap_mapping --branch hydro-devel > and make!
+
+ED Map
