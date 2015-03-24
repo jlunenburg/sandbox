@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+
+<launch>
+    
+    <!-- Static tf publisher -->
+    <node pkg="tf" type="static_transform_publisher" name="imu_tf_broadcaster" args="0.295 0.085 0.14 0 0 0 1 sergio/base_link imu 100" />
+    
+    <!-- Launch -->
+    <node pkg="xsens_driver" type="mtnode.py" name="imu_node">
+        <param name="frame_id" value="imu"/>
+    </node>
+
+</launch>
+
+<!-- 
+        Install drivers
+            sudo apt-get install ros-hydro-xsens-driver
+        First: give permissions: 
+            sudo chmod 777 /dev/ttyUSB0 
+        Configure device?: 
+            
+    -->
