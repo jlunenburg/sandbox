@@ -51,11 +51,11 @@ Visualization Manager:
       Enabled: false
       Frame Timeout: 1
       Frames:
-        All Enabled: false
+        All Enabled: true
       Marker Scale: 1
       Name: TF
       Show Arrows: false
-      Show Axes: true
+      Show Axes: false
       Show Names: false
       Tree:
         {}
@@ -109,6 +109,14 @@ Visualization Manager:
       Name: Map
       Topic: /map
       Value: true
+    - Class: rviz/MarkerArray
+      Enabled: true
+      Marker Topic: /occupied_cells_vis_array
+      Name: Octomap
+      Namespaces:
+        map: true
+      Queue Size: 100
+      Value: true
   Enabled: true
   Global Options:
     Background Color: 48; 48; 48
@@ -133,22 +141,22 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/Orbit
-      Distance: 3.50934
+      Distance: 5.14559
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.06
         Stereo Focal Distance: 1
         Swap Stereo Eyes: false
         Value: false
       Focal Point:
-        X: 2.94879
-        Y: 2.61312
-        Z: -0.367201
+        X: 11.8559
+        Y: 8.84336
+        Z: -0.346434
       Name: Current View
       Near Clip Distance: 0.01
-      Pitch: 0.674797
+      Pitch: 0.534797
       Target Frame: <Fixed Frame>
       Value: Orbit (rviz)
-      Yaw: 5.28319
+      Yaw: 5.2882
     Saved: ~
 Window Geometry:
   Displays:
