@@ -9,12 +9,28 @@
     <!-- Load robot models -->
     <group ns="amigo">
         <param name="robot_description" textfile="$(find amigo_description)/urdf/amigo.urdf"/>
-        <include file="$(find robot_launch_files)/launch/essentials/robot_state_publisher.launch"/>
+        <node pkg="robot_state_publisher" type="state_publisher" name="robot_state_publisher">
+            <rosparam command="load" file="$(find amigo_bringup)/parameters/essentials/robot_state_publisher.yaml" />
+        </node>
+        
+        <!-- Static tf publisher for robot pose-->
+        <node pkg="tf" type="static_transform_publisher" name="base_pose_pub" args="-3.0 0.0 0.0 0 0 0 1 /map /amigo/base_link 100" />
+        
+        <!-- Joint state publisher -->
+        <node pkg="sandbox" type="amigo_jointstates.py" name="jointstate_publisher"/>
     </group>
     
     <group ns="sergio">
         <param name="robot_description" textfile="$(find sergio_description)/urdf/sergio.urdf"/>
-        <include file="$(find robot_launch_files)/launch/essentials/robot_state_publisher.launch"/>
+        <node pkg="robot_state_publisher" type="state_publisher" name="robot_state_publisher">
+            <rosparam command="load" file="$(find sergio_bringup)/parameters/essentials/robot_state_publisher.yaml" />
+        </node>
+        
+        <!-- Static tf publisher for robot pose-->
+        <node pkg="tf" type="static_transform_publisher" name="base_pose_pub" args="3.0 0.0 0.0 -0.87 0 0 /map /sergio/base_link 100" />
+        
+        <!-- Joint state publisher -->
+        <node pkg="sandbox" type="sergio_jointstates.py" name="jointstate_publisher"/>
     </group>
     
     <!-- Loc map -->
