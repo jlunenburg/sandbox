@@ -6,3 +6,13 @@ Create the octomap < rosrun octomap_map_maker octomap_map_maker coveroctomap.pgm
 Install octomap server < git clone https://github.com/OctoMap/octomap_mapping --branch hydro-devel > and make!
 
 ED Map
+
+RVIZ
+Camera viewpoint:
+- Distance: 3.8185
+- Yaw: 5.30044
+- Pitch: 0.105398
+- Focal point:
+-- x: 1.6829
+-- y: -0.588115
+-- z: 0.957307
