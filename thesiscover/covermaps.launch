@@ -44,8 +44,11 @@
     <!-- ED -->
     <group ns="amigo">
         <node pkg="ed" type="ed" name="ed" args="$(arg config_file)"/>
-        <node pkg="ed_gui_server" type="ed_rviz_publisher" name="ed_rviz_publisher"/>
     </group>
-    
+    <node pkg="ed_gui_server" type="ed_rviz_publisher" name="ed_rviz_publisher">
+        <remap from="/ed/gui/entities" to="/amigo/ed/gui/entities"/>
+        <remap from="/ed/gui/query_meshes" to="/amigo/ed/gui/query_meshes"/>
+        <remap from="/ed/rviz" to="/amigo/world_model"/>
+    </node>
 
 </launch>
