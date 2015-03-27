@@ -182,8 +182,8 @@ if __name__ == '__main__':
     msg.effort.append(0)
     
     ## Torso laser
-    msg.name.append("torso_laser_joint")
-    msg.position.append(0.3)
+    msg.name.append("laser_tilt_joint")
+    msg.position.append(0.0)
     msg.velocity.append(0)
     msg.effort.append(0)
     
