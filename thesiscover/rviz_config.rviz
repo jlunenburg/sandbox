@@ -6,9 +6,7 @@ Panels:
       Expanded:
         - /Global Options1
         - /Status1
-        - /MarkerArray1
-        - /MarkerArray2
-        - /MarkerArray2/Namespaces1
+        - /ED1/Namespaces1
       Splitter Ratio: 0.5
     Tree Height: 697
   - Class: rviz/Selection
@@ -856,7 +854,7 @@ Visualization Manager:
     - Class: rviz/MarkerArray
       Enabled: true
       Marker Topic: /occupied_cells_vis_array
-      Name: MarkerArray
+      Name: Octomap
       Namespaces:
         map: true
       Queue Size: 100
@@ -864,7 +862,7 @@ Visualization Manager:
     - Class: rviz/MarkerArray
       Enabled: true
       Marker Topic: /amigo/world_model
-      Name: MarkerArray
+      Name: ED
       Namespaces:
         entities: true
         labels: false
