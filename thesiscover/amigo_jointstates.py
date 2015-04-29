@@ -67,25 +67,25 @@ if __name__ == '__main__':
     
     # Finger 1 joint
     msg.name.append("finger1_joint_left")
-    msg.position.append(0.0)
+    msg.position.append(0.3)
     msg.velocity.append(0.0)
     msg.effort.append(0.0)
     
     # Finger 1 tip joint
     msg.name.append("finger1_tip_joint_left")
-    msg.position.append(0.0)
+    msg.position.append(-0.45)
     msg.velocity.append(0.0)
     msg.effort.append(0.0)
     
     # Finger 2 joint
     msg.name.append("finger2_joint_left")
-    msg.position.append(0.0)
+    msg.position.append(0.3)
     msg.velocity.append(0.0)
     msg.effort.append(0.0)
     
     # Finger 2 tip joint
     msg.name.append("finger2_tip_joint_left")
-    msg.position.append(0.0)
+    msg.position.append(-0.45)
     msg.velocity.append(0.0)
     msg.effort.append(0.0)
     
@@ -134,32 +134,32 @@ if __name__ == '__main__':
     
     # Finger 1 joint
     msg.name.append("finger1_joint_right")
-    msg.position.append(0.0)
+    msg.position.append(0.3)
     msg.velocity.append(0.0)
     msg.effort.append(0.0)
     
     # Finger 1 tip joint
     msg.name.append("finger1_tip_joint_right")
-    msg.position.append(0.0)
+    msg.position.append(-0.45)
     msg.velocity.append(0.0)
     msg.effort.append(0.0)
     
     # Finger 2 joint
     msg.name.append("finger2_joint_right")
-    msg.position.append(0.0)
+    msg.position.append(0.3)
     msg.velocity.append(0.0)
     msg.effort.append(0.0)
     
     # Finger 2 tip joint
     msg.name.append("finger2_tip_joint_right")
-    msg.position.append(0.0)
+    msg.position.append(-0.45)
     msg.velocity.append(0.0)
     msg.effort.append(0.0)
     
     ## Neck
     # Neck pan joint
     msg.name.append("neck_pan_joint")
-    msg.position.append(0.0)
+    msg.position.append(-0.3)
     msg.velocity.append(0)
     msg.effort.append(0)
     

@@ -27,7 +27,8 @@
         </node>
         
         <!-- Static tf publisher for robot pose-->
-        <node pkg="tf" type="static_transform_publisher" name="base_pose_pub" args="3.0 0.0 0.0 -0.87 0 0 /map /sergio/base_link 100" />
+        <!--<node pkg="tf" type="static_transform_publisher" name="base_pose_pub" args="3.0 0.0 0.0 -0.87 0 0 /map /sergio/base_link 100" />-->
+        <node pkg="tf" type="static_transform_publisher" name="base_pose_pub" args="3.0 -0.5 0.0 -0.87 0 0 /map /sergio/base_link 100" />
         
         <!-- Joint state publisher -->
         <node pkg="sandbox" type="sergio_jointstates.py" name="jointstate_publisher"/>
